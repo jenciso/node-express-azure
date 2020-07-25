@@ -47,7 +47,7 @@ Navigate to the `/test` folder to review the unit tests for this project. These 
 npm start
 ```
 
-### Azure Pipelines
+### CI / Azure Pipelines
 
 Basic steps:
 
@@ -68,7 +68,7 @@ steps:
 
 ```
 
-DockerFile
+DockerFile:
 
 ```dockerfile
 FROM node:12
