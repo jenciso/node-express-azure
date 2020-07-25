@@ -47,6 +47,35 @@ Navigate to the `/test` folder to review the unit tests for this project. These 
 npm start
 ```
 
+### Azure Pipelines
+
+Basic steps:
+
+```yaml
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '8.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+  displayName: 'npm install'
+
+- script: |
+    npm test
+  displayName: 'npm test'
+
+- task: ArchiveFiles@2
+  displayName: 'Archive files'
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+    includeRootFolder: false
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish artifacts: drop'
+```
+
 ### Author
 
 Juan Enciso
