@@ -55,7 +55,7 @@ Basic steps:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '8.x'
+    versionSpec: '12.x'
   displayName: 'Install Node.js'
 
 - script: |
