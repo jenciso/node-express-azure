@@ -66,14 +66,18 @@ steps:
     npm test
   displayName: 'npm test'
 
-- task: ArchiveFiles@2
-  displayName: 'Archive files'
-  inputs:
-    rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
-    includeRootFolder: false
+```
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish artifacts: drop'
+DockerFile
+
+```dockerfile
+FROM node:12
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 8080
+CMD [ "node", "app.js" ]
 ```
 
 ### Author
