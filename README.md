@@ -20,7 +20,26 @@ npm install
 npm test
 ```
 
-![alt text](https://user-images.githubusercontent.com/5126491/51065379-c1743280-15c1-11e9-80fd-6a3d7ab4ac1b.jpg "Unit Test")
+```shell
+$ npm run test
+> node-express-azure@1.0.0 test /home/jenciso/projetos/github.com/node-express-azure
+> mocha --exit
+
+Demo app is running on 8080!
+
+
+  /GET
+    ✓ returns the contact page
+
+  /GET
+    ✓ returns the homepage
+
+  /GET
+    ✓ returns the who page
+
+
+  3 passing (43ms)
+```
 
 Navigate to the `/test` folder to review the unit tests for this project. These tests will run as part of your Azure DevOps Build pipeline. See `azure-pipelines.yml` in this repo.
 
